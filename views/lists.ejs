@@ -1,0 +1,26 @@
+<%- include("header") -%>
+
+    <div class="box" id="heading">
+      <h1> <%= listtitle %></h1>
+    </div>
+
+    <div class="box">
+
+        <% for (var i=0; i<newlistitems.length; i++) { %>
+          <div class="item">
+            <input type="checkbox">
+            <p><%= newlistitems[i] %></p>
+          </div>
+
+
+       <%  } %>
+       <form class="item" action="/" method="post">
+         <!-- this is actually making any post in the any section to the main homeroute. -->
+         <input type="text" name="newitem" placeholder="New Item" autocomplete="off">
+
+         <button type="Submit" name="list" value=<%= listtitle %>>+</button>
+
+       </form>
+    </div>
+
+<%- include("footer") -%>
